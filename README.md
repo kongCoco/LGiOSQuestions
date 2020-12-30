@@ -420,6 +420,9 @@ HTTPS的握手流程，如下图，摘自图解HTTP
 #### 17. App网络层有哪些优化策略？
 
 * 优化DNS解析和缓存
+[iOS网络请求优化之DNS映射](https://www.jianshu.com/p/777b10759dbc)
+[IOS下三种DNS解析方式分析（LocalDns）](https://www.jianshu.com/p/31e826539de9)
+[APP网络优化之DNS优化实践](https://juejin.cn/post/6844904036294983688)
 * 对传输的数据进行压缩，减少传输的数据
 * 使用缓存手段减少请求的发起次数
 * 使用策略来减少请求的发起次数，比如在上一个请求未着地之前，不进行新的请求
@@ -427,6 +430,7 @@ HTTPS的握手流程，如下图，摘自图解HTTP
 
 
 #### 18：[self class] 与 [super class]
+[class和object_getClass方法区别](https://www.cnblogs.com/lybSkill/p/10186663.html)
 
 ```
 @implementation Son : Father
@@ -490,6 +494,7 @@ objc_msgSend(objc_super->receiver, @selector(class))
     return self;
 }
 ```
+[[self class]和[super class]带来的思考](https://blog.csdn.net/shu19931023/article/details/90675614)
 
 #### 18.isKindOfClass 与 isMemberOfClass
 
@@ -569,6 +574,10 @@ objc_object::ISA()
 - (BOOL)isMemberOfClass:(Class)cls {
     return [self class] == cls;
 }
+```
+
+```
+ 1 0 0 0
 ```
 
 首先题目中NSObject 和 Sark分别调用了class方法。
